@@ -1,0 +1,9 @@
+<div class="footer bg-dark px-5 text-light">
+  <div class="container d-flex justify-content-end">
+    <p class="mx-1">STOPKA</p>
+    {{ range .gameState }}
+    <p id="turnNo" class="mx-1">Tura numer: {{.TurnNumber}}</p>
+    <p id="phaseNo" class="mx-1">Faza tury:{{.PhaseNumber}}</p>
+    {{end }}
+  </div>
+</div>

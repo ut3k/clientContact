@@ -1,0 +1,31 @@
+.main {
+  --s: 150px;  /* size  */
+  --m: 4px;    /* margin */
+  --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+  position:absolute;
+}
+
+.hexcontainer {
+  font-size: 0; /*disable white space between inline block element */
+  display:flex;
+}
+
+.hex-shape {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s)*1.1547); 
+  display: inline-block;
+  font-size:initial;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background: red;
+  margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+}
+
+/* .hex-inside { */
+/* } */
+
+.row-even > :first-child {
+  margin-left: calc((var(--s) / 2) + (var(--m) * 2));
+  background: green;
+}
+
