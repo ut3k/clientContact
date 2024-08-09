@@ -10,7 +10,7 @@ type Clients struct {
 	gorm.Model
 	ID              uint
 	Name            string
-	Nip             uint
+	Nip             int
 	Phone           int
 	ContactPersone  string
 	PersonePhone    int

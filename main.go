@@ -22,6 +22,7 @@ import (
 func init() {
 	initializers.ConnectToDataBase()
 	initializers.SyncDB()
+	initializers.PopulateClients()
 }
 
 func main() {
