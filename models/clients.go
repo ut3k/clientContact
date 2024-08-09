@@ -1,9 +1,25 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 type Clients struct {
 	gorm.Model
-	Title string
-	Body  string
+	ID              uint
+	Name            string
+	Nip             uint
+	Phone           int
+	ContactPersone  string
+	PersonePhone    int
+	WWW             string
+	FB              string
+	Email           string
+	Adres           string
+	AdresGoogleCODE string
+	GoogleMapURL    string
+	LastContact     time.Time
+	NextContact     time.Time
 }
