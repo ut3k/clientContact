@@ -2,9 +2,13 @@
 go.work
 go.work.sum
 
+test
+# test/*
 *.test
 *.tmp
 tmp/
+
 *.db
+*.csv
 
 .env
