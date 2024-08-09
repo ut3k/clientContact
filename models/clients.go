@@ -20,6 +20,7 @@ type Clients struct {
 	Adres           string
 	AdresGoogleCODE string
 	GoogleMapURL    string
+	Status          int
 	LastContact     time.Time
 	NextContact     time.Time
 }

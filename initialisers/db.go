@@ -17,9 +17,8 @@ func ConnectToDataBase() {
 
 	if err != nil {
 		fmt.Println("Failed to connect to DataBase")
-
+		return
 	}
-	// return db, nil
 
 }
 
