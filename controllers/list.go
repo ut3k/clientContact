@@ -28,6 +28,9 @@ func ClientListView(c *fiber.Ctx) error {
 	return c.Render("index", fiber.Map{
 		"Clients": Clients,
 		"BaseURL": c.BaseURL(),
+		"Current": page,
+		"Next":    page + 1,
+		"Prev":    page - 1,
 	})
 
 }
