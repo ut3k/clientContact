@@ -57,6 +57,7 @@ func main() {
 	// Setup routes
 	app.Get("/", controllers.ClientListView)
 	app.Get("/tabview/", controllers.ClientTableView)
+	app.Get("/client/:id", controllers.ClientSingle)
 
 	// setup
 	app.Static("/", "./public")
