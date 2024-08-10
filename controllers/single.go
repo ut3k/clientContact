@@ -1,8 +1,6 @@
 package controllers
 
 import (
-	"fmt"
-
 	"github.com/gofiber/fiber/v2"
 	initializers "github.com/ut3k/clientContact/initialisers"
 	"github.com/ut3k/clientContact/models"
