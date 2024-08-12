@@ -16,19 +16,20 @@ func ClientAdd(c *fiber.Ctx) error {
 
 func ClientAddPost(c *fiber.Ctx) error {
 
-	id := c.Params("id")
+	var Client []models.Clients
+
+	err := c.BodyParser(Client)
+	if err != nil {
+		return c.Status(fiber.StatusBadRequest).SendString(err.Error())
+	}
 
 	initializers.ConnectToDataBase()
 
-	var Client []models.Clients
-
-	if err := initializers.DB.First(&Client, id).Error; err != nil {
-		return c.Status(fiber.StatusNotFound).SendString("Client not found")
+	err = initializers.DB.Create(Client).Error
+	if err != nil {
+		return c.Status(fiber.StatusInternalServerError).SendString(err.Error())
 	}
 
-	return c.Render("clientsingle", fiber.Map{
-		"Client":  Client,
-		"BaseURL": c.BaseURL(),
-	})
+	return c.Redirect("clientadd")
 
 }

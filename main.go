@@ -61,7 +61,7 @@ func main() {
 
 	// Client ADD
 	app.Get("/clientadd", controllers.ClientAdd)
-	// app.Post("/clientadd", cont)
+	app.Post("/clientadd", controllers.ClientAddPost)
 
 	// setup
 	app.Static("/", "./public")
