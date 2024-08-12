@@ -59,6 +59,10 @@ func main() {
 	app.Get("/tabview/", controllers.ClientTableView)
 	app.Get("/client/:id", controllers.ClientSingle)
 
+	// Client ADD
+	app.Get("/clientadd", controllers.ClientAdd)
+	// app.Post("/clientadd", cont)
+
 	// setup
 	app.Static("/", "./public")
 
