@@ -1,2 +1,2 @@
 # clientContact
-Simple web/Docker (GUI ?) app to contact clients
+Web/Docker/ (GUI?) app like clients phonebook
