@@ -16,16 +16,16 @@ func ClientAdd(c *fiber.Ctx) error {
 
 func ClientAddPost(c *fiber.Ctx) error {
 
-	var Client []models.Clients
+	var Client models.Clients
 
-	err := c.BodyParser(Client)
+	err := c.BodyParser(&Client)
 	if err != nil {
 		return c.Status(fiber.StatusBadRequest).SendString(err.Error())
 	}
 
 	initializers.ConnectToDataBase()
 
-	err = initializers.DB.Create(Client).Error
+	err = initializers.DB.Create(&Client).Error
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).SendString(err.Error())
 	}
