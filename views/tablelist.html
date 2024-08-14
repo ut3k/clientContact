@@ -20,7 +20,7 @@
           <td>{{.ID}}</td>
           <td>{{.Name}}</td>
           <td>{{.UpdatedAt}}</td>
-          <td>Edytuj</td>
+          <td><a href="/clientupdate/{{.ID}}" class="btn btn-outline-warning">Edytuj</a></td>
           <td><a href="/clientdelete/{{.ID}}" class="btn btn-outline-danger">Usuń</a></td>
         </tr>
         {{ end }}

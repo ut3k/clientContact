@@ -63,6 +63,10 @@ func main() {
 	app.Get("/clientadd", controllers.ClientAdd)
 	app.Post("/clientadd", controllers.ClientAddPost)
 
+	// client Update
+	app.Get("/clientupdate/:id", controllers.ClientUpdate)
+	app.Post("/clientupdate/:id", controllers.ClientUpdatePost)
+
 	// Client Delete
 	app.Get("/clientdelete/:id", controllers.ClientDelete)
 	app.Post("/clientdelete/:id", controllers.ClientDeletePost)
