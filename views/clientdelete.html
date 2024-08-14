@@ -1,0 +1,18 @@
+{{ range .Client}}
+<div class="vh-100 d-flex">
+  <div class="container d-lg-flex align-items-center justify-content-lg-center my-auto">
+    <div style="max-width: 60ch;">
+      <h5>Czy jesteś pewien że chcesz usunąć Klienta:</h5>
+      <h4 class="fw-bold text-danger">ID#:{{.ID}}  - {{.Name}}</h4>
+      <p>Adres: {{.Adres}}</p>
+      <p>Telefon: {{.Phone}}</p>
+      <div class="d-flex align-items-center justify-content-lg-end gap-3">
+        <form action="/clientdelete/{{.ID}}" method="POST">
+          <button class="btn btn-danger" type="submit">Tak, usuń</button>
+          <a href="/tabview/" class="btn btn-outline-primary" role="button">Nie usuwaj</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  {{end}}

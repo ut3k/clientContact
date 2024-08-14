@@ -63,6 +63,10 @@ func main() {
 	app.Get("/clientadd", controllers.ClientAdd)
 	app.Post("/clientadd", controllers.ClientAddPost)
 
+	// Client Delete
+	app.Get("/clientdelete/:id", controllers.ClientDelete)
+	app.Post("/clientdelete/:id", controllers.ClientDeletePost)
+
 	// setup
 	app.Static("/", "./public")
 
