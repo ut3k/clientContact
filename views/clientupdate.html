@@ -6,90 +6,93 @@
 
       <h3>Zmień dane Klienta #ID: {{.ID}}</h3>
 
-      <!-- Name -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="name" class="form-label w-25">Nazwa:</label>
-        <input class="form-control" type="text" id="name" name="name" value="{{.Name}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+      <form action="/clientupdate/{{.ID}}"  method="POST">
+        <!-- Name -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="name" class="form-label w-25">Nazwa:</label>
+          <input class="form-control" type="text" id="name" name="name" value="{{.Name}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- NIP -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="nip" class="form-label w-25">Nip:</label>
-        <input class="form-control" type="number" id="nip" name="nip" value="{{.Nip}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- NIP -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="nip" class="form-label w-25">Nip:</label>
+          <input class="form-control" type="number" id="nip" name="nip" value="{{.Nip}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- Phone -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="phone" class="form-label w-25">Telefon:</label>
-        <input class="form-control" type="tel" id="phone" name="phone" value="{{.Phone}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- Phone -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="phone" class="form-label w-25">Telefon:</label>
+          <input class="form-control" type="tel" id="phone" name="phone" value="{{.Phone}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- Contact Persone Name -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="contactpersone" class="form-label w-25">Osoba Kontaktowa</label>
-        <input class="form-control" type="text" id="contactpersone" name="contactpersone" value="{{.ContactPersone}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- Contact Persone Name -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="contactpersone" class="form-label w-25">Osoba Kontaktowa</label>
+          <input class="form-control" type="text" id="contactpersone" name="contactpersone" value="{{.ContactPersone}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- Contact persone Phone -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="personephone" class="form-label w-25">Numer telefonu:</label>
-        <input class="form-control" type="tel" id="personephone" name="personephone" value="{{.PersonePhone}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- Contact persone Phone -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="personephone" class="form-label w-25">Numer telefonu:</label>
+          <input class="form-control" type="tel" id="personephone" name="personephone" value="{{.PersonePhone}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- www -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="WWW" class="form-label w-25">WWW:</label>
-        <input class="form-control" type="url" id="WWW" name="WWW" value="{{.WWW}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- www -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="WWW" class="form-label w-25">WWW:</label>
+          <input class="form-control" type="url" id="WWW" name="WWW" value="{{.WWW}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- FB  -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="FB" class="form-label w-25">FB:</label>
-        <input class="form-control" type="url" id="FB" name="FB" value="{{.FB}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- FB  -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="FB" class="form-label w-25">FB:</label>
+          <input class="form-control" type="url" id="FB" name="FB" value="{{.FB}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- email -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="email" class="form-label w-25">Email:</label>
-        <input class="form-control" type="email" id="email" name="email" value="{{.Email}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- email -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="email" class="form-label w-25">Email:</label>
+          <input class="form-control" type="email" id="email" name="email" value="{{.Email}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-       <!-- adres -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="adres" class="form-label w-25">Adres:</label>
-        <input class="form-control" type="text" id="adres" name="adres" value="{{.Adres}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- adres -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="adres" class="form-label w-25">Adres:</label>
+          <input class="form-control" type="text" id="adres" name="adres" value="{{.Adres}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- adres Google CODE -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="adresgooglecode" class="form-label w-25">Google map CODE:</label>
-        <input class="form-control" type="text" id="adresgooglecode" name="adresgooglecode" value="{{.AdresGoogleCODE}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- adres Google CODE -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="adresgooglecode" class="form-label w-25">Google map CODE:</label>
+          <input class="form-control" type="text" id="adresgooglecode" name="adresgooglecode" value="{{.AdresGoogleCODE}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- google map URL -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="googlemapurl" class="form-label w-25">Google Map:</label>
-        <input class="form-control" type="url" id="googlemapurl" name="googlemapurl" value="{{.GoogleMapURL}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- google map URL -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="googlemapurl" class="form-label w-25">Google Map:</label>
+          <input class="form-control" type="url" id="googlemapurl" name="googlemapurl" value="{{.GoogleMapURL}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
-      <!-- status -->
-      <form action="/clientupdate/{{.ID}}" class="d-md-flex my-3 gap-3" method="POST">
-        <label for="status" class="form-label w-25">Status:</label>
-        <input class="form-control" type="number" id="status" name="status" value="{{.Status}}">
-        <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
-      </form>
+        <!-- status -->
+        <div class="d-md-flex my-3 gap-3">
+          <label for="status" class="form-label w-25">Status:</label>
+          <input class="form-control" type="number" id="status" name="status" value="{{.Status}}">
+          <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
+        </div>
 
+      </form>
+      <a href="/tabview/" class="btn btn-primary">Widok listy</a>
     </div>
   </div>
 </div>
