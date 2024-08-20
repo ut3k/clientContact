@@ -10,17 +10,17 @@ type Clients struct {
 	gorm.Model
 	ID              uint
 	Name            string
-	Nip             int
+	Nip             int `gorm:"default:NULL"`
 	Phone           int
-	ContactPersone  string
-	PersonePhone    int
-	WWW             string
-	FB              string
-	Email           string
-	Adres           string
-	AdresGoogleCODE string
+	ContactPersone  string `gorm:"default:NULL"`
+	PersonePhone    int    `gorm:"default:NULL"`
+	WWW             string `gorm:"default:NULL"`
+	FB              string `gorm:"default:NULL"`
+	Email           string `gorm:"default:NULL"`
+	Adres           string `gorm:"default:NULL"`
+	AdresGoogleCODE string `gorm:"unique"`
 	GoogleMapURL    string
-	Status          int
+	Status          int `gorm:"default:0"`
 	LastContact     time.Time
 	NextContact     time.Time
 }
