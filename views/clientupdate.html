@@ -87,7 +87,13 @@
         <!-- status -->
         <div class="d-md-flex my-3 gap-3">
           <label for="status" class="form-label w-25">Status:</label>
-          <input class="form-control" type="number" id="status" name="status" value="{{.Status}}">
+          <select class="form-select" name="status">
+            <option value="-5" {{ if eq -5 .Status}} selected {{end}} >Niezainteresowany</option>
+              <option value="-2" {{ if eq -2 .Status}} selected {{end}} >Raczej niezainteresowany</option>
+              <option value="0" {{ if eq 0 .Status}} selected {{end}} >Skontaktuj</option>
+              <option value="5" {{ if eq 5 .Status}} selected {{end}} >Może zainteresowany</option>
+              <option value="10" {{ if eq 10 .Status}} selected {{end}} >Zainteresowany</option>
+          </select>
           <button class="btn btn-outline-warning d-flex align-self-sm-end align-self-md-end" type="submit">zmień</button>
         </div>
 
