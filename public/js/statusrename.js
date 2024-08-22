@@ -20,7 +20,7 @@ function changeStatus (wartosc) {
     } else if (orginalvalue > 5 && orginalvalue < 11) {
 obj.classList.add("bg-success")
     } else {
-      obj.classList.add("bg-dark")
+      obj.classList.add("bg-secondary")
     }
   })
 };

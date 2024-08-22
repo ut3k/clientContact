@@ -3,7 +3,6 @@
     <h1 class="mx-auto w-25">Heading</h1>
     <form action="/clientadd" method="POST">
       <div class="row">
-        me
         <div class="col-md-5">
           <p class="text-sm-start text-md-end">Nazwa:</p>
         </div>
@@ -123,6 +122,22 @@
             class="form-control"
             type="text"
           />
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-5">
+          <p class="text-sm-start text-md-end">Status</p>
+        </div>
+        <div class="col-md-5">
+          <select class="form-select" name="status">
+              <option value="-5" >Niezainteresowany</option>
+              <option value="-2">Raczej niezainteresowany</option>
+              <option value="0" selected>Skontaktuj</option>
+              <option value="5">Może zainteresowany</option>
+              <option value="10">Zainteresowany</option>
+          </select>
         </div>
       </div>
 
