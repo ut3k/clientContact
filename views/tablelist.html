@@ -2,12 +2,34 @@
   <h1>Heading</h1>
   <p>Paragraph</p>
 </div>
+
 <div class="container">
-  <div class="table-responsive-lg">
+  <!-- Formularz filtrowania -->
+  <form method="GET" action="" class="form-inline mb-3">
+    <div class="form-group">
+      <label for="name">Filtruj po nazwie: </label>
+      <input type="text" class="korm-control mx-2" name="name" id="name" value="{{.FilterName}}" />
+      <button type="submit" class="btn btn-primary">Szukaj</button>
+    </div>
+  </form>
+  <div class="container">
+
+  <div class="table-responsive-md">
     <table class="table table-striped table-sm">
       <thead>
         <tr>
-          <th>ID</th>
+          <th>
+  <a href="?sort=name&order={{if eq .SortColumn "name"}}{{if eq .SortOrder "asc"}}desc{{else}}asc{{end}}{{else}}asc{{end}}">
+    Nazwa
+    {{if eq .SortColumn "name"}}{{if eq .SortOrder "asc"}}⬆️{{else}}⬇️{{end}}{{end}}
+  </a>
+</th>
+<th>
+  <a href="?sort=updated_at&order={{if eq .SortColumn "updated_at"}}{{if eq .SortOrder "asc"}}desc{{else}}asc{{end}}{{else}}asc{{end}}">
+    Ostatni kontakt
+    {{if eq .SortColumn "updated_at"}}{{if eq .SortOrder "asc"}}⬆️{{else}}⬇️{{end}}{{end}}
+  </a>
+</th>
           <th>Nazwa</th>
           <th>Ostatni kontakt</th>
           <th>Edytuj</th>
@@ -28,4 +50,4 @@
     </table>
   </div>
 </div>
-{{ template "partials/pagination" .}}
+{{ template "partials/pagination" }}
