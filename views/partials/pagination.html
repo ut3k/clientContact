@@ -2,7 +2,7 @@
   <div class="container d-flex justify-content-center">
     <nav>
       <ul class="pagination">
-        {{ if gt .Current 1 }}
+        {{if gt .Current 1}}
         <li class="page-item">
           <a
             class="page-link"
@@ -18,7 +18,7 @@
             aria-label="Next"
             href="?page={{.Next}}&sort={{.SortColumn}}&order={{.SortOrder}}&name={{.FilterName}}"
           >
-            ><span aria-hidden="true">» Next</span></a
+            <span aria-hidden="true">» Next</span></a
           >
         </li>
       </ul>

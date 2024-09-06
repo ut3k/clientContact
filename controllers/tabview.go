@@ -37,7 +37,7 @@ func ClientTableView(c *fiber.Ctx) error {
 	query = query.Order(sortColumn + " " + sortOrder)
 
 	if filterName != "" {
-		query = query.Where("name LIKE ?", "%"+filterName+"%h")
+		query = query.Where("Name LIKE ?", "%"+filterName+"%")
 	}
 
 	result := query.Find(&Clients)
@@ -52,11 +52,12 @@ func ClientTableView(c *fiber.Ctx) error {
 	}
 
 	return c.Render("tablelist", fiber.Map{
+		"Strona":     page,
 		"Clients":    Clients,
 		"BaseURL":    c.BaseURL(),
 		"Current":    page,
 		"Next":       page + 1,
-		"Prev":       page,
+		"Prev":       prev,
 		"SortColumn": sortColumn,
 		"SortOrder":  sortOrder,
 		"FilterName": filterName,
