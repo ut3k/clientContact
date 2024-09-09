@@ -17,6 +17,7 @@ import (
 
 	"github.com/ut3k/clientContact/controllers"
 	initializers "github.com/ut3k/clientContact/initialisers"
+	"github.com/ut3k/clientContact/utils"
 )
 
 func init() {
@@ -28,7 +29,7 @@ func init() {
 func main() {
 	engine := html.New("./views", ".html")
 	// Setup app
-
+	engine.AddFunc("ShortDate", utils.ShortDate)
 	engine.Reload(true)
 	// Disable on production
 
@@ -49,6 +50,8 @@ func main() {
 		Views:       engine,
 		ViewsLayout: "layouts/main",
 	})
+
+	// inicjalizacja utils
 
 	//middleware (cokolwiek to jest)
 	app.Use(recover.New())

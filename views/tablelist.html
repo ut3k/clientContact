@@ -1,8 +1,5 @@
 <div class="container">
-  <h1>Heading</h1>
-  <p>Paragraph</p>
-  <h3>{{.Strona}}</h3>
-
+  <h1>Edytuj klienta</h1>
 </div>
 
 <div class="container">
@@ -42,7 +39,7 @@
         <tr>
           <td>{{.ID}}</td>
           <td>{{.Name}}</td>
-          <td>{{.UpdatedAt}}</td>
+          <td>{{ShortDate .UpdatedAt}}</td>
           <td><a href="/clientupdate/{{.ID}}" class="btn btn-outline-warning">Edytuj</a></td>
           <td><a href="/clientdelete/{{.ID}}" class="btn btn-outline-danger">Usuń</a></td>
         </tr>
