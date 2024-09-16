@@ -2,11 +2,7 @@
   <div class="container py-4 py-xl-5">
     <div class="row mb-5">
       <div class="col-md-8 col-xl-6 text-center mx-auto">
-        <h2>Lista</h2>
-        <p>
-          Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc.
-          Vestibulum dui eget ultrices.
-        </p>
+        <h2>Klienci do skontaktowania</h2>
       </div>
     </div>
     <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
@@ -15,7 +11,8 @@
         <div class="p-4">
           <span class="badge rounded-pill mb-2 ustatus">{{.Status}}</span>
           <h4>{{ .Name }}</h4>
-          <p>{{.WWW}} / {{.Phone}}</p>
+          <p class="my-0"><a href="{{.WWW}}" target="_blank">{{.WWW}}</a></p>
+          <p class="mt-0"><a href="tel:{{.Phone}}">{{.Phone}}</a></p>
           <p>First Contact: ### <br />Last contact: ###</p>
           <p class="w-100"></p>
           <div class="d-flex">
