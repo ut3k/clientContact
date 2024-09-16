@@ -30,6 +30,7 @@
     {{if eq .SortColumn "updated_at"}}{{if eq .SortOrder "asc"}}⬆️{{else}}⬇️{{end}}{{end}}
   </a>
 </th>
+            <th>Status</th>
           <th>Edytuj</th>
           <th>Usuń</th>
         </tr>
@@ -40,6 +41,7 @@
           <td>{{.ID}}</td>
           <td>{{.Name}}</td>
           <td>{{ShortDate .UpdatedAt}}</td>
+            <td> <div class=" badge ustatus"> {{.Status}} </div></td>
           <td><a href="/clientupdate/{{.ID}}" class="btn btn-outline-warning">Edytuj</a></td>
           <td><a href="/clientdelete/{{.ID}}" class="btn btn-outline-danger">Usuń</a></td>
         </tr>
@@ -49,3 +51,4 @@
   </div>
 </div>
 {{ template "partials/pagination" . }}
+{{ template "partials/clientstat" .}}
