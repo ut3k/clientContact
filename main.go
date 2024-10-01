@@ -74,6 +74,23 @@ func main() {
 	app.Get("/clientdelete/:id", controllers.ClientDelete)
 	app.Post("/clientdelete/:id", controllers.ClientDeletePost)
 
+	// client filter by status
+	app.Get("/notinterested/", func(c *fiber.Ctx) error {
+		return controllers.ClientFilterByStatus(c, -5)
+	})
+	app.Get("/rathernotinterested/", func(c *fiber.Ctx) error {
+		return controllers.ClientFilterByStatus(c, -2)
+	})
+	app.Get("/makecall/", func(c *fiber.Ctx) error {
+		return controllers.ClientFilterByStatus(c, 0)
+	})
+	app.Get("/maybeinterested/", func(c *fiber.Ctx) error {
+		return controllers.ClientFilterByStatus(c, 5)
+	})
+	app.Get("/interested/", func(c *fiber.Ctx) error {
+		return controllers.ClientFilterByStatus(c, 10)
+	})
+
 	// setup
 	app.Static("/", "./public")
 
