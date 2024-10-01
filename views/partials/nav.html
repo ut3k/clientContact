@@ -30,13 +30,13 @@
             aria-expanded="false"
           >Klienci</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Nie zainteresowani</a></li>
-            <li><a class="dropdown-item" href="#">Raczej nie zainteresowani</a></li>
+            <li><a class="dropdown-item" href="{{.BaseURL}}/notinterested/">Nie zainteresowani</a></li>
+            <li><a class="dropdown-item" href="{{.BaseURL}}/rathernotinterested/">Raczej nie zainteresowani</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Skontaktuj</a></li>
+            <li><a class="dropdown-item" href="{{.BaseURL}}/makecall/">Skontaktuj</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Może zainteresowani</a></li>
-            <li><a class="dropdown-item" href="#">Zainteresowani</a></li>
+            <li><a class="dropdown-item" href="{{.BaseURL}}/maybeinterested/">Może zainteresowani</a></li>
+            <li><a class="dropdown-item" href="{{.BaseURL}}/interested/">Zainteresowani</a></li>
           </ul>
         </li>
         <li class="nav-item">
