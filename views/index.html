@@ -5,50 +5,52 @@
         <h2>Klienci do skontaktowania</h2>
       </div>
     </div>
-    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+    <div class="row gx-4 gy-4 row-cols-1 row-cols-md-2 row-cols-xl-2">
       {{ range .Clients }}
       <div class="col">
-        <div class="p-4">
-          <span class="badge rounded-pill mb-2 ustatus">{{.Status}}</span>
-          <h4>{{ .Name }}</h4>
-          <p class="my-0"><a href="{{.WWW}}" target="_blank">{{.WWW}}</a></p>
-          <p class="mt-0"><a href="tel:{{.Phone}}">{{.Phone}}</a></p>
-          <p>First Contact: ### <br />Last contact: ###</p>
-          <p class="w-100"></p>
-          <div class="d-flex">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              viewBox="0 0 16 16"
-              class="bi bi-person-fill fs-1 mx-2"
-            >
-              <path
-                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-              ></path>
-            </svg>
-            <div>
-              <p class="fw-bold mb-0">{{.ContactPersone}}</p>
-              <p class="text-muted mb-0">{{.PersonePhone}}</p>
-              <a target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                  class="bi bi-telephone-fill"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                  ></path></svg
-                >&nbsp;zadzwoń</a
+        <div class="card h-100">
+          <div class="p-4">
+            <span class="badge rounded-pill mb-2 ustatus">{{.Status}}</span>
+            <h4>{{ .Name }}</h4>
+            <p class="my-0"><a href="{{.WWW}}" target="_blank">{{.WWW}}</a></p>
+            <p class="mt-0"><a href="tel:{{.Phone}}">{{.Phone}}</a></p>
+            <p>First Contact: ### <br />Last contact: ###</p>
+            <p class="w-100"></p>
+            <div class="d-flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="bi bi-person-fill fs-1 mx-2"
               >
+                <path
+                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                ></path>
+              </svg>
+              <div>
+                <p class="fw-bold mb-0">{{.ContactPersone}}</p>
+                <p class="text-muted mb-0">{{.PersonePhone}}</p>
+                <a target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    class="bi bi-telephone-fill"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                    ></path></svg
+                  >&nbsp;zadzwoń</a
+                >
+              </div>
             </div>
+            <button class="btn btn-primary mt-2" type="button">Zadzwoń</button>
           </div>
-          <button class="btn btn-primary mt-2" type="button">Zadzwoń</button>
         </div>
       </div>
       {{ end }}
